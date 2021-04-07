@@ -14,7 +14,7 @@ NODES_LINE_TEMPLATE = "***STARTING BENCHMARK FOR: {0} nodes***"
 
 NODES_COUNT = [1, 2, 4, 8, 16, 32, 64, 128, 256, 512, 1024, 2048, 4096, None]
 
-file_name = "results_raw/download_1000nodes_3pc.txt"
+file_name = "results_raw/download_1000nodes_2pc_take2.txt"
 
 with open(file_name) as file_:
     for num, line in enumerate(file_, 1):
@@ -85,6 +85,7 @@ with open(file_name) as file_:
                 dropobx_mins.append(temp_dropbox_secs / count)
                 temp_dropbox_secs = 0
                 index += 1
+                print(count)            
                 count = 0
    
 

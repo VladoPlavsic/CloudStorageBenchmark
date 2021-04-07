@@ -123,18 +123,20 @@ def upload_share_download(images=None):
     write_and_print("--------------------------- YANDEX UPLOAD, LIST, SHARE S3 BENCHMARK STOP  ---------------------------\n")
 
 
-def multiple_node_download():
+def multiple_node_download(dropbox=True, s3=True):
     node_counts = [1, 2, 4, 8, 16, 32, 64, 128, 256, 512, 1024, 2048, 4096]
-    write_and_print("--------------------------- YANDEX DOWNLOAD S3 BENCHMARK START ---------------------------\n")
-    for node_count in node_counts:
-        write_and_print(f"***STARTING BENCHMARK FOR: {node_count} nodes***\n")
-        multiple_node_read_yandex(images_folder="images1/", node_count=node_count)
-    write_and_print("--------------------------- YANDEX DOWNLOAD S3 BENCHMARK STOP  ---------------------------\n")
+    if s3:
+        write_and_print("--------------------------- YANDEX DOWNLOAD S3 BENCHMARK START ---------------------------\n")
+        for node_count in node_counts:
+            write_and_print(f"***STARTING BENCHMARK FOR: {node_count} nodes***\n")
+            multiple_node_read_yandex(images_folder="images1/", node_count=node_count)
+        write_and_print("--------------------------- YANDEX DOWNLOAD S3 BENCHMARK STOP  ---------------------------\n")
+    if dropbox:
     write_and_print("---------------------------- DROPBOX DOWNLOAD BENCHMARK START ----------------------------\n")
-    for node_count in node_counts:
-        write_and_print(f"***STARTING BENCHMARK FOR: {node_count} nodes***\n")
-        multiple_node_read_dropbox(images_folder="images1/", node_count=node_count)
-    write_and_print("---------------------------- DROPBOX DOWNLOAD BENCHMARK STOP  ----------------------------\n")
+        for node_count in node_counts:
+            write_and_print(f"***STARTING BENCHMARK FOR: {node_count} nodes***\n")
+            multiple_node_read_dropbox(images_folder="images1/", node_count=node_count)
+        write_and_print("---------------------------- DROPBOX DOWNLOAD BENCHMARK STOP  ----------------------------\n")
 
   
 if __name__ == "__main__":
@@ -150,3 +152,10 @@ if __name__ == "__main__":
         upload_share_download(images=[images1])
         write_and_print("\n\n")
         multiple_node_download()
+    elif arg == "-d":
+        write_and_print(header_multi_thread_download(), overwrite=True)
+        multiple_node_download(s3=False)
+    elif arg == "-s":
+        write_and_print(header_multi_thread_download(), overwrite=True)
+        multiple_node_download(dropbox=False)
+        

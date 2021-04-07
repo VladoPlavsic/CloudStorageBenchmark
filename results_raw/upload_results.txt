@@ -13,21 +13,6 @@
 * Total file count: 30                                                             *
 * Total file count: 100                                                            *
 ************************************************************************************
-*                                                                                  *
-* And see how node count affects access speed for stored files:                    *
-*                                                                                  *
-************************************************************************************
-* Total node count: 2                                                              *
-* Total node count: 4                                                              *
-* Total node count: 8                                                              *
-* Total node count: 16                                                             *
-* Total node count: 32                                                             *
-* Total node count: 64                                                             *
-* Total node count: 128                                                            *
-* File count 15                                                                    *
-* Average file size: 8200 bytes                                                    *
-* File type: .jpg                                                                  *
-************************************************************************************
 
 ---------------------------- DROPBOX UPLOAD, LIST, SHARE BENCHMARK START ----------------------------
 ***STARTING BENCHMARK FOR: 5 images***

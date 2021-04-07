@@ -124,7 +124,7 @@ def upload_share_download(images=None):
 
 
 def multiple_node_download():
-    node_counts = [1, 2, 4, 8, 16, 32, 64, 128, 256, 512, 1000]
+    node_counts = [1, 2, 4, 8, 16, 32, 64, 128, 256, 512, 1024, 2048, 4096]
     write_and_print("--------------------------- YANDEX DOWNLOAD S3 BENCHMARK START ---------------------------\n")
     for node_count in node_counts:
         write_and_print(f"***STARTING BENCHMARK FOR: {node_count} nodes***\n")

@@ -12,9 +12,9 @@ YANDEX_STOP_LINE = 0
 
 NODES_LINE_TEMPLATE = "***STARTING BENCHMARK FOR: {0} nodes***"
 
-NODES_COUNT = [1, 2, 4, 8, 16, 32, 64, 128, 256, 512, 1000, None]
+NODES_COUNT = [1, 2, 4, 8, 16, 32, 64, 128, 256, 512, 1024, 2048, 4096, None]
 
-file_name = "results/download_1000nodes_1pc_take2.txt"
+file_name = "results_raw/download_1000nodes_3pc.txt"
 
 with open(file_name) as file_:
     for num, line in enumerate(file_, 1):

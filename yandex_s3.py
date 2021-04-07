@@ -54,7 +54,7 @@ def get_objects_from_folder(list_, folder_name, thread, node_count):
         try:
             downloaded = client.get_object(Bucket=BUCKET, Key=file_['Key'])
         except Exception as e:
-            with open("restults.txt", 'a+') as results:
+            with open("results.txt", 'a+') as results:
                 results.writelines(f"Error raised trying to download file from s3 in node {thread}. Max retries achived\n")
                 continue
     timer(f"yandex s3 stop get objects {BUCKET} node {thread}")

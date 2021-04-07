@@ -132,7 +132,7 @@ def multiple_node_download(dropbox=True, s3=True):
             multiple_node_read_yandex(images_folder="images1/", node_count=node_count)
         write_and_print("--------------------------- YANDEX DOWNLOAD S3 BENCHMARK STOP  ---------------------------\n")
     if dropbox:
-    write_and_print("---------------------------- DROPBOX DOWNLOAD BENCHMARK START ----------------------------\n")
+        write_and_print("---------------------------- DROPBOX DOWNLOAD BENCHMARK START ----------------------------\n")
         for node_count in node_counts:
             write_and_print(f"***STARTING BENCHMARK FOR: {node_count} nodes***\n")
             multiple_node_read_dropbox(images_folder="images1/", node_count=node_count)

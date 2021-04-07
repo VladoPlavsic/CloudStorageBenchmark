@@ -55,13 +55,15 @@ def create_links_from_list(list_, folder_name):
     timer(f"dropbox stop create sharing links {folder_name}")
 
 def download_files_from_folder(list_, folder_name, thread, node_count):
+    dropbox_ = create_dropbox_instance()
     timer(f"dropbox start download files {folder_name} node {thread}")
-
     for file_ in list_:
-        meta, res = dropbox_.files_download(path=file_.path_display)
-        with open(downloads_folder + f"{node_count}/" + f"node{thread}/" + file_.name, 'wb') as downloaded_file:
-            downloaded_file.write(res.content)
-
+        try:
+            meta, res = dropbox_.files_download(path=file_.path_display)
+        except Exception as e:
+            with open("results.txt", 'a+') as results:
+                results.writelines(f"Error raised trying to download file from dropbox in node {thread}. Max retries achived\n")
+                continue
     timer(f"dropbox stop download files {folder_name} node {thread}")
     print_times(f"dropbox start download files {folder_name} node {thread}", f"dropbox stop download files {folder_name} node {thread}")
 

@@ -46,16 +46,19 @@ def create_links_from_list(list_):
     timer(f"yandex s3 stop create sharing links {BUCKET}")
 
 def get_objects_from_folder(list_, folder_name, thread, node_count):
+    client = session.client(service_name="s3", endpoint_url=YANDEX_S3_ENDPOINT, aws_access_key_id=ACCESS_KEY_ID, aws_secret_access_key=SECRET_ACCESS_KEY)
     timer(f"yandex s3 start get objects {BUCKET} node {thread}")
     for file_ in list_:
         if file_['Key'] == folder_name:
             continue
-        downloaded = client.get_object(Bucket=BUCKET, Key=file_['Key'])
-        with open(downloads_folder + f"{node_count}/" + f"node{thread}/" + file_['Key'].replace(f"{folder_name}", ""), 'wb') as downloaded_file:
-            downloaded_file.write(downloaded['Body'].read())
-
+        try:
+            downloaded = client.get_object(Bucket=BUCKET, Key=file_['Key'])
+        except Exception as e:
+            with open("restults.txt", 'a+') as results:
+                results.writelines(f"Error raised trying to download file from s3 in node {thread}. Max retries achived\n")
+                continue
     timer(f"yandex s3 stop get objects {BUCKET} node {thread}")
-    print_times(f"yandex s3 start get objects {BUCKET} node {thread}", f"yandex s3 stop get objects {BUCKET}  node {thread}")
+    print_times(f"yandex s3 start get objects {BUCKET} node {thread}", f"yandex s3 stop get objects {BUCKET} node {thread}")
 
 
 def run_yandex_benchmark(folder_name):
@@ -72,7 +75,7 @@ def create_folder_structure_for_nodes(node_count):
         Path(f"{downloads_folder}{node_count}/node{i}").mkdir(parents=True, exist_ok=True)
 
 def multiple_node_read(images_folder, node_count):
-    create_folder_structure_for_nodes(node_count=node_count)
+    #create_folder_structure_for_nodes(node_count=node_count)
     folder_name = images_folder
     list_ = list_bucket(folder_name=folder_name)
     list_ = list_['Contents']

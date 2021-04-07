@@ -1,0 +1,592 @@
+*----------------------------------------------------------------------------------*
+*                      Dropbox vs Yandex s3 benchmark                              *
+*----------------------------------------------------------------------------------*
+*                                                                                  *
+* In this benchmark we will see 3 of most common operations on  cloud stored files *
+*                                                                                  *
+************************************************************************************
+* 1. Upload files                                                                  *
+* 2. List folder                                                                   *
+* 3. Create sharing links                                                          *
+* Total file count: 5                                                              *
+* Total file count: 15                                                             *
+* Total file count: 30                                                             *
+* Total file count: 100                                                            *
+************************************************************************************
+*                                                                                  *
+* And see how node count affects access speed for stored files:                    *
+*                                                                                  *
+************************************************************************************
+* Total node count: 2                                                              *
+* Total node count: 4                                                              *
+* Total node count: 8                                                              *
+* Total node count: 16                                                             *
+* Total node count: 32                                                             *
+* Total node count: 64                                                             *
+* Total node count: 128                                                            *
+* File count 15                                                                    *
+* Average file size: 8200 bytes                                                    *
+* File type: .jpg                                                                  *
+************************************************************************************
+
+---------------------------- DROPBOX UPLOAD, LIST, SHARE BENCHMARK START ----------------------------
+***STARTING BENCHMARK FOR: 5 images***
+Time elapsed between dropbox start upload images5/ and dropbox stop upload images5/: 0:00:08.153781
+Time elapsed between dropbox start list folder images5/ and dropbox stop list folder images5/: 0:00:00.577422
+Time elapsed between dropbox start create sharing links images5/ and dropbox stop create sharing links images5/: 0:00:06.991327
+***STARTING BENCHMARK FOR: 15 images***
+Time elapsed between dropbox start upload images15/ and dropbox stop upload images15/: 0:00:26.633928
+Time elapsed between dropbox start list folder images15/ and dropbox stop list folder images15/: 0:00:00.340114
+Time elapsed between dropbox start create sharing links images15/ and dropbox stop create sharing links images15/: 0:00:16.154405
+***STARTING BENCHMARK FOR: 30 images***
+Time elapsed between dropbox start upload images30/ and dropbox stop upload images30/: 0:00:40.305735
+Time elapsed between dropbox start list folder images30/ and dropbox stop list folder images30/: 0:00:00.431526
+Time elapsed between dropbox start create sharing links images30/ and dropbox stop create sharing links images30/: 0:00:34.340834
+***STARTING BENCHMARK FOR: 100 images***
+Time elapsed between dropbox start upload images100/ and dropbox stop upload images100/: 0:02:13.656945
+Time elapsed between dropbox start list folder images100/ and dropbox stop list folder images100/: 0:00:00.611161
+Time elapsed between dropbox start create sharing links images100/ and dropbox stop create sharing links images100/: 0:01:55.014048
+---------------------------- DROPBOX UPLOAD, LIST, SHARE BENCHMARK STOP ----------------------------
+--------------------------- YANDEX UPLOAD, LIST, SHARE S3 BENCHMARK START ---------------------------
+***STARTING BENCHMARK FOR: 5 images***
+Time elapsed between yandex s3 start upload images5/ and yandex s3 stop upload images5/: 0:00:01.771644
+Time elapsed between yandex s3 start list folder images5/ and yandex s3 stop list folder images5/: 0:00:00.103666
+Time elapsed between yadnex s3 start create sharing links benchmark and yandex s3 stop create sharing links benchmark: 0:00:00.002008
+***STARTING BENCHMARK FOR: 15 images***
+Time elapsed between yandex s3 start upload images15/ and yandex s3 stop upload images15/: 0:00:04.737140
+Time elapsed between yandex s3 start list folder images15/ and yandex s3 stop list folder images15/: 0:00:00.095890
+Time elapsed between yadnex s3 start create sharing links benchmark and yandex s3 stop create sharing links benchmark: 0:00:00.006622
+***STARTING BENCHMARK FOR: 30 images***
+Time elapsed between yandex s3 start upload images30/ and yandex s3 stop upload images30/: 0:00:09.373624
+Time elapsed between yandex s3 start list folder images30/ and yandex s3 stop list folder images30/: 0:00:00.113096
+Time elapsed between yadnex s3 start create sharing links benchmark and yandex s3 stop create sharing links benchmark: 0:00:00.011136
+***STARTING BENCHMARK FOR: 100 images***
+Time elapsed between yandex s3 start upload images100/ and yandex s3 stop upload images100/: 0:00:31.729132
+Time elapsed between yandex s3 start list folder images100/ and yandex s3 stop list folder images100/: 0:00:00.186252
+Time elapsed between yadnex s3 start create sharing links benchmark and yandex s3 stop create sharing links benchmark: 0:00:00.036239
+--------------------------- YANDEX UPLOAD, LIST, SHARE S3 BENCHMARK STOP  ---------------------------
+
+
+--------------------------- YANDEX DOWNLOAD S3 BENCHMARK START ---------------------------
+***STARTING BENCHMARK FOR: 1 nodes***
+Time elapsed between yandex s3 start get objects benchmark node 0 and yandex s3 stop get objects benchmark node 0: 0:00:03.324699
+***STARTING BENCHMARK FOR: 2 nodes***
+Time elapsed between yandex s3 start get objects benchmark node 1 and yandex s3 stop get objects benchmark node 1: 0:00:04.542308
+Time elapsed between yandex s3 start get objects benchmark node 0 and yandex s3 stop get objects benchmark node 0: 0:00:04.887019
+***STARTING BENCHMARK FOR: 4 nodes***
+Time elapsed between yandex s3 start get objects benchmark node 3 and yandex s3 stop get objects benchmark node 3: 0:00:05.428718
+Time elapsed between yandex s3 start get objects benchmark node 1 and yandex s3 stop get objects benchmark node 1: 0:00:06.012889
+Time elapsed between yandex s3 start get objects benchmark node 0 and yandex s3 stop get objects benchmark node 0: 0:00:06.614188
+Time elapsed between yandex s3 start get objects benchmark node 2 and yandex s3 stop get objects benchmark node 2: 0:00:07.292489
+***STARTING BENCHMARK FOR: 8 nodes***
+Time elapsed between yandex s3 start get objects benchmark node 7 and yandex s3 stop get objects benchmark node 7: 0:00:03.863308
+Time elapsed between yandex s3 start get objects benchmark node 2 and yandex s3 stop get objects benchmark node 2: 0:00:04.070978
+Time elapsed between yandex s3 start get objects benchmark node 4 and yandex s3 stop get objects benchmark node 4: 0:00:04.668422
+Time elapsed between yandex s3 start get objects benchmark node 1 and yandex s3 stop get objects benchmark node 1: 0:00:04.705777
+Time elapsed between yandex s3 start get objects benchmark node 0 and yandex s3 stop get objects benchmark node 0: 0:00:04.735012
+Time elapsed between yandex s3 start get objects benchmark node 3 and yandex s3 stop get objects benchmark node 3: 0:00:04.896954
+Time elapsed between yandex s3 start get objects benchmark node 5 and yandex s3 stop get objects benchmark node 5: 0:00:05.587135
+Time elapsed between yandex s3 start get objects benchmark node 6 and yandex s3 stop get objects benchmark node 6: 0:00:08.258264
+***STARTING BENCHMARK FOR: 16 nodes***
+Time elapsed between yandex s3 start get objects benchmark node 0 and yandex s3 stop get objects benchmark node 0: 0:00:12.011645
+Time elapsed between yandex s3 start get objects benchmark node 2 and yandex s3 stop get objects benchmark node 2: 0:00:13.279161
+Time elapsed between yandex s3 start get objects benchmark node 13 and yandex s3 stop get objects benchmark node 13: 0:00:13.266726
+Time elapsed between yandex s3 start get objects benchmark node 14 and yandex s3 stop get objects benchmark node 14: 0:00:13.288536
+Time elapsed between yandex s3 start get objects benchmark node 3 and yandex s3 stop get objects benchmark node 3: 0:00:13.575139
+Time elapsed between yandex s3 start get objects benchmark node 6 and yandex s3 stop get objects benchmark node 6: 0:00:13.579312
+Time elapsed between yandex s3 start get objects benchmark node 1 and yandex s3 stop get objects benchmark node 1: 0:00:13.707226
+Time elapsed between yandex s3 start get objects benchmark node 5 and yandex s3 stop get objects benchmark node 5: 0:00:13.775386
+Time elapsed between yandex s3 start get objects benchmark node 11 and yandex s3 stop get objects benchmark node 11: 0:00:14.337302
+Time elapsed between yandex s3 start get objects benchmark node 4 and yandex s3 stop get objects benchmark node 4: 0:00:14.552510
+Time elapsed between yandex s3 start get objects benchmark node 10 and yandex s3 stop get objects benchmark node 10: 0:00:14.777578
+Time elapsed between yandex s3 start get objects benchmark node 8 and yandex s3 stop get objects benchmark node 8: 0:00:14.819394
+Time elapsed between yandex s3 start get objects benchmark node 15 and yandex s3 stop get objects benchmark node 15: 0:00:14.889250
+Time elapsed between yandex s3 start get objects benchmark node 7 and yandex s3 stop get objects benchmark node 7: 0:00:15.029679
+Time elapsed between yandex s3 start get objects benchmark node 9 and yandex s3 stop get objects benchmark node 9: 0:00:15.020382
+Time elapsed between yandex s3 start get objects benchmark node 12 and yandex s3 stop get objects benchmark node 12: 0:00:18.232204
+***STARTING BENCHMARK FOR: 32 nodes***
+Time elapsed between yandex s3 start get objects benchmark node 8 and yandex s3 stop get objects benchmark node 8: 0:00:11.076046
+Time elapsed between yandex s3 start get objects benchmark node 0 and yandex s3 stop get objects benchmark node 0: 0:00:11.169313
+Time elapsed between yandex s3 start get objects benchmark node 6 and yandex s3 stop get objects benchmark node 6: 0:00:13.215270
+Time elapsed between yandex s3 start get objects benchmark node 4 and yandex s3 stop get objects benchmark node 4: 0:00:13.241562
+Time elapsed between yandex s3 start get objects benchmark node 14 and yandex s3 stop get objects benchmark node 14: 0:00:13.632345
+Time elapsed between yandex s3 start get objects benchmark node 9 and yandex s3 stop get objects benchmark node 9: 0:00:13.984083
+Time elapsed between yandex s3 start get objects benchmark node 17 and yandex s3 stop get objects benchmark node 17: 0:00:14.041887
+Time elapsed between yandex s3 start get objects benchmark node 15 and yandex s3 stop get objects benchmark node 15: 0:00:14.087423
+Time elapsed between yandex s3 start get objects benchmark node 30 and yandex s3 stop get objects benchmark node 30: 0:00:14.232674
+Time elapsed between yandex s3 start get objects benchmark node 19 and yandex s3 stop get objects benchmark node 19: 0:00:14.827697
+Time elapsed between yandex s3 start get objects benchmark node 7 and yandex s3 stop get objects benchmark node 7: 0:00:14.932277
+Time elapsed between yandex s3 start get objects benchmark node 13 and yandex s3 stop get objects benchmark node 13: 0:00:14.925228
+Time elapsed between yandex s3 start get objects benchmark node 16 and yandex s3 stop get objects benchmark node 16: 0:00:15.383896
+Time elapsed between yandex s3 start get objects benchmark node 2 and yandex s3 stop get objects benchmark node 2: 0:00:15.546330
+Time elapsed between yandex s3 start get objects benchmark node 1 and yandex s3 stop get objects benchmark node 1: 0:00:15.691708
+Time elapsed between yandex s3 start get objects benchmark node 20 and yandex s3 stop get objects benchmark node 20: 0:00:15.776889
+Time elapsed between yandex s3 start get objects benchmark node 29 and yandex s3 stop get objects benchmark node 29: 0:00:16.132971
+Time elapsed between yandex s3 start get objects benchmark node 3 and yandex s3 stop get objects benchmark node 3: 0:00:16.332007
+Time elapsed between yandex s3 start get objects benchmark node 18 and yandex s3 stop get objects benchmark node 18: 0:00:16.572391
+Time elapsed between yandex s3 start get objects benchmark node 5 and yandex s3 stop get objects benchmark node 5: 0:00:16.635159
+Time elapsed between yandex s3 start get objects benchmark node 11 and yandex s3 stop get objects benchmark node 11: 0:00:16.634060
+Time elapsed between yandex s3 start get objects benchmark node 10 and yandex s3 stop get objects benchmark node 10: 0:00:16.907824
+Time elapsed between yandex s3 start get objects benchmark node 27 and yandex s3 stop get objects benchmark node 27: 0:00:16.860233
+Time elapsed between yandex s3 start get objects benchmark node 21 and yandex s3 stop get objects benchmark node 21: 0:00:17.360486
+Time elapsed between yandex s3 start get objects benchmark node 26 and yandex s3 stop get objects benchmark node 26: 0:00:17.946692
+Time elapsed between yandex s3 start get objects benchmark node 24 and yandex s3 stop get objects benchmark node 24: 0:00:17.973828
+Time elapsed between yandex s3 start get objects benchmark node 25 and yandex s3 stop get objects benchmark node 25: 0:00:18.140023
+Time elapsed between yandex s3 start get objects benchmark node 23 and yandex s3 stop get objects benchmark node 23: 0:00:18.149064
+Time elapsed between yandex s3 start get objects benchmark node 28 and yandex s3 stop get objects benchmark node 28: 0:00:19.178144
+Time elapsed between yandex s3 start get objects benchmark node 12 and yandex s3 stop get objects benchmark node 12: 0:00:20.394586
+Time elapsed between yandex s3 start get objects benchmark node 31 and yandex s3 stop get objects benchmark node 31: 0:00:20.423723
+Time elapsed between yandex s3 start get objects benchmark node 22 and yandex s3 stop get objects benchmark node 22: 0:00:23.448435
+***STARTING BENCHMARK FOR: 64 nodes***
+Time elapsed between yandex s3 start get objects benchmark node 0 and yandex s3 stop get objects benchmark node 0: 0:00:20.884336
+Time elapsed between yandex s3 start get objects benchmark node 18 and yandex s3 stop get objects benchmark node 18: 0:00:24.235497
+Time elapsed between yandex s3 start get objects benchmark node 3 and yandex s3 stop get objects benchmark node 3: 0:00:25.098967
+Time elapsed between yandex s3 start get objects benchmark node 40 and yandex s3 stop get objects benchmark node 40: 0:00:25.009201
+Time elapsed between yandex s3 start get objects benchmark node 52 and yandex s3 stop get objects benchmark node 52: 0:00:25.766138
+Time elapsed between yandex s3 start get objects benchmark node 37 and yandex s3 stop get objects benchmark node 37: 0:00:26.065442
+Time elapsed between yandex s3 start get objects benchmark node 55 and yandex s3 stop get objects benchmark node 55: 0:00:26.392789
+Time elapsed between yandex s3 start get objects benchmark node 53 and yandex s3 stop get objects benchmark node 53: 0:00:26.617563
+Time elapsed between yandex s3 start get objects benchmark node 48 and yandex s3 stop get objects benchmark node 48: 0:00:26.693298
+Time elapsed between yandex s3 start get objects benchmark node 8 and yandex s3 stop get objects benchmark node 8: 0:00:27.176397
+Time elapsed between yandex s3 start get objects benchmark node 28 and yandex s3 stop get objects benchmark node 28: 0:00:27.083380
+Time elapsed between yandex s3 start get objects benchmark node 22 and yandex s3 stop get objects benchmark node 22: 0:00:27.611244
+Time elapsed between yandex s3 start get objects benchmark node 2 and yandex s3 stop get objects benchmark node 2: 0:00:27.829100
+Time elapsed between yandex s3 start get objects benchmark node 39 and yandex s3 stop get objects benchmark node 39: 0:00:27.694543
+Time elapsed between yandex s3 start get objects benchmark node 15 and yandex s3 stop get objects benchmark node 15: 0:00:28.122372
+Time elapsed between yandex s3 start get objects benchmark node 27 and yandex s3 stop get objects benchmark node 27: 0:00:28.817146
+Time elapsed between yandex s3 start get objects benchmark node 34 and yandex s3 stop get objects benchmark node 34: 0:00:28.844420
+Time elapsed between yandex s3 start get objects benchmark node 20 and yandex s3 stop get objects benchmark node 20: 0:00:29.738337
+Time elapsed between yandex s3 start get objects benchmark node 25 and yandex s3 stop get objects benchmark node 25: 0:00:29.719675
+Time elapsed between yandex s3 start get objects benchmark node 26 and yandex s3 stop get objects benchmark node 26: 0:00:29.826520
+Time elapsed between yandex s3 start get objects benchmark node 24 and yandex s3 stop get objects benchmark node 24: 0:00:29.944601
+Time elapsed between yandex s3 start get objects benchmark node 31 and yandex s3 stop get objects benchmark node 31: 0:00:29.879713
+Time elapsed between yandex s3 start get objects benchmark node 36 and yandex s3 stop get objects benchmark node 36: 0:00:30.758274
+Time elapsed between yandex s3 start get objects benchmark node 32 and yandex s3 stop get objects benchmark node 32: 0:00:31.133796
+Time elapsed between yandex s3 start get objects benchmark node 35 and yandex s3 stop get objects benchmark node 35: 0:00:31.138745
+Time elapsed between yandex s3 start get objects benchmark node 44 and yandex s3 stop get objects benchmark node 44: 0:00:31.125917
+Time elapsed between yandex s3 start get objects benchmark node 13 and yandex s3 stop get objects benchmark node 13: 0:00:31.419470
+Time elapsed between yandex s3 start get objects benchmark node 47 and yandex s3 stop get objects benchmark node 47: 0:00:31.224508
+Time elapsed between yandex s3 start get objects benchmark node 50 and yandex s3 stop get objects benchmark node 50: 0:00:31.202435
+Time elapsed between yandex s3 start get objects benchmark node 10 and yandex s3 stop get objects benchmark node 10: 0:00:31.635338
+Time elapsed between yandex s3 start get objects benchmark node 5 and yandex s3 stop get objects benchmark node 5: 0:00:32.016172
+Time elapsed between yandex s3 start get objects benchmark node 7 and yandex s3 stop get objects benchmark node 7: 0:00:32.107269
+Time elapsed between yandex s3 start get objects benchmark node 51 and yandex s3 stop get objects benchmark node 51: 0:00:31.818206
+Time elapsed between yandex s3 start get objects benchmark node 59 and yandex s3 stop get objects benchmark node 59: 0:00:31.768765
+Time elapsed between yandex s3 start get objects benchmark node 33 and yandex s3 stop get objects benchmark node 33: 0:00:32.208546
+Time elapsed between yandex s3 start get objects benchmark node 63 and yandex s3 stop get objects benchmark node 63: 0:00:32.004160
+Time elapsed between yandex s3 start get objects benchmark node 16 and yandex s3 stop get objects benchmark node 16: 0:00:32.691672
+Time elapsed between yandex s3 start get objects benchmark node 1 and yandex s3 stop get objects benchmark node 1: 0:00:33.051578
+Time elapsed between yandex s3 start get objects benchmark node 23 and yandex s3 stop get objects benchmark node 23: 0:00:33.007715
+Time elapsed between yandex s3 start get objects benchmark node 14 and yandex s3 stop get objects benchmark node 14: 0:00:33.208039
+Time elapsed between yandex s3 start get objects benchmark node 11 and yandex s3 stop get objects benchmark node 11: 0:00:33.258580
+Time elapsed between yandex s3 start get objects benchmark node 12 and yandex s3 stop get objects benchmark node 12: 0:00:33.336167
+Time elapsed between yandex s3 start get objects benchmark node 41 and yandex s3 stop get objects benchmark node 41: 0:00:33.314725
+Time elapsed between yandex s3 start get objects benchmark node 30 and yandex s3 stop get objects benchmark node 30: 0:00:33.479811
+Time elapsed between yandex s3 start get objects benchmark node 21 and yandex s3 stop get objects benchmark node 21: 0:00:33.764414
+Time elapsed between yandex s3 start get objects benchmark node 61 and yandex s3 stop get objects benchmark node 61: 0:00:33.829519
+Time elapsed between yandex s3 start get objects benchmark node 54 and yandex s3 stop get objects benchmark node 54: 0:00:33.898503
+Time elapsed between yandex s3 start get objects benchmark node 49 and yandex s3 stop get objects benchmark node 49: 0:00:33.932618
+Time elapsed between yandex s3 start get objects benchmark node 19 and yandex s3 stop get objects benchmark node 19: 0:00:34.186821
+Time elapsed between yandex s3 start get objects benchmark node 43 and yandex s3 stop get objects benchmark node 43: 0:00:34.100180
+Time elapsed between yandex s3 start get objects benchmark node 45 and yandex s3 stop get objects benchmark node 45: 0:00:34.361814
+Time elapsed between yandex s3 start get objects benchmark node 29 and yandex s3 stop get objects benchmark node 29: 0:00:34.733091
+Time elapsed between yandex s3 start get objects benchmark node 42 and yandex s3 stop get objects benchmark node 42: 0:00:34.663341
+Time elapsed between yandex s3 start get objects benchmark node 4 and yandex s3 stop get objects benchmark node 4: 0:00:35.164851
+Time elapsed between yandex s3 start get objects benchmark node 9 and yandex s3 stop get objects benchmark node 9: 0:00:35.198094
+Time elapsed between yandex s3 start get objects benchmark node 17 and yandex s3 stop get objects benchmark node 17: 0:00:35.281497
+Time elapsed between yandex s3 start get objects benchmark node 46 and yandex s3 stop get objects benchmark node 46: 0:00:35.716019
+Time elapsed between yandex s3 start get objects benchmark node 56 and yandex s3 stop get objects benchmark node 56: 0:00:35.712240
+Time elapsed between yandex s3 start get objects benchmark node 38 and yandex s3 stop get objects benchmark node 38: 0:00:36.344766
+Time elapsed between yandex s3 start get objects benchmark node 58 and yandex s3 stop get objects benchmark node 58: 0:00:36.885554
+Time elapsed between yandex s3 start get objects benchmark node 60 and yandex s3 stop get objects benchmark node 60: 0:00:38.149135
+Time elapsed between yandex s3 start get objects benchmark node 57 and yandex s3 stop get objects benchmark node 57: 0:00:43.692431
+***STARTING BENCHMARK FOR: 128 nodes***
+Time elapsed between yandex s3 start get objects benchmark node 5 and yandex s3 stop get objects benchmark node 5: 0:00:33.376578
+Time elapsed between yandex s3 start get objects benchmark node 39 and yandex s3 stop get objects benchmark node 39: 0:00:37.899945
+Time elapsed between yandex s3 start get objects benchmark node 10 and yandex s3 stop get objects benchmark node 10: 0:00:40.431438
+Time elapsed between yandex s3 start get objects benchmark node 2 and yandex s3 stop get objects benchmark node 2: 0:00:41.222927
+Time elapsed between yandex s3 start get objects benchmark node 0 and yandex s3 stop get objects benchmark node 0: 0:00:42.474693
+Time elapsed between yandex s3 start get objects benchmark node 93 and yandex s3 stop get objects benchmark node 93: 0:00:43.999299
+Time elapsed between yandex s3 start get objects benchmark node 41 and yandex s3 stop get objects benchmark node 41: 0:00:46.127209
+Time elapsed between yandex s3 start get objects benchmark node 118 and yandex s3 stop get objects benchmark node 118: 0:00:45.726672
+Time elapsed between yandex s3 start get objects benchmark node 26 and yandex s3 stop get objects benchmark node 26: 0:00:46.774795
+Time elapsed between yandex s3 start get objects benchmark node 8 and yandex s3 stop get objects benchmark node 8: 0:00:47.682406
+Time elapsed between yandex s3 start get objects benchmark node 17 and yandex s3 stop get objects benchmark node 17: 0:00:49.038678
+Time elapsed between yandex s3 start get objects benchmark node 108 and yandex s3 stop get objects benchmark node 108: 0:00:49.741053
+Time elapsed between yandex s3 start get objects benchmark node 13 and yandex s3 stop get objects benchmark node 13: 0:00:50.551977
+Time elapsed between yandex s3 start get objects benchmark node 24 and yandex s3 stop get objects benchmark node 24: 0:00:50.561808
+Time elapsed between yandex s3 start get objects benchmark node 31 and yandex s3 stop get objects benchmark node 31: 0:00:51.372993
+Time elapsed between yandex s3 start get objects benchmark node 34 and yandex s3 stop get objects benchmark node 34: 0:00:52.167670
+Time elapsed between yandex s3 start get objects benchmark node 115 and yandex s3 stop get objects benchmark node 115: 0:00:52.913278
+Time elapsed between yandex s3 start get objects benchmark node 92 and yandex s3 stop get objects benchmark node 92: 0:00:53.364408
+Time elapsed between yandex s3 start get objects benchmark node 84 and yandex s3 stop get objects benchmark node 84: 0:00:53.448401
+Time elapsed between yandex s3 start get objects benchmark node 97 and yandex s3 stop get objects benchmark node 97: 0:00:53.415322
+Time elapsed between yandex s3 start get objects benchmark node 7 and yandex s3 stop get objects benchmark node 7: 0:00:54.206675
+Time elapsed between yandex s3 start get objects benchmark node 23 and yandex s3 stop get objects benchmark node 23: 0:00:54.545015
+Time elapsed between yandex s3 start get objects benchmark node 88 and yandex s3 stop get objects benchmark node 88: 0:00:54.596675
+Time elapsed between yandex s3 start get objects benchmark node 51 and yandex s3 stop get objects benchmark node 51: 0:00:54.993855
+Time elapsed between yandex s3 start get objects benchmark node 90 and yandex s3 stop get objects benchmark node 90: 0:00:54.895455
+Time elapsed between yandex s3 start get objects benchmark node 73 and yandex s3 stop get objects benchmark node 73: 0:00:55.289467
+Time elapsed between yandex s3 start get objects benchmark node 72 and yandex s3 stop get objects benchmark node 72: 0:00:55.634664
+Time elapsed between yandex s3 start get objects benchmark node 60 and yandex s3 stop get objects benchmark node 60: 0:00:55.814527
+Time elapsed between yandex s3 start get objects benchmark node 89 and yandex s3 stop get objects benchmark node 89: 0:00:55.688363
+Time elapsed between yandex s3 start get objects benchmark node 114 and yandex s3 stop get objects benchmark node 114: 0:00:55.900360
+Time elapsed between yandex s3 start get objects benchmark node 120 and yandex s3 stop get objects benchmark node 120: 0:00:56.067028
+Time elapsed between yandex s3 start get objects benchmark node 21 and yandex s3 stop get objects benchmark node 21: 0:00:57.084295
+Time elapsed between yandex s3 start get objects benchmark node 49 and yandex s3 stop get objects benchmark node 49: 0:00:57.187223
+Time elapsed between yandex s3 start get objects benchmark node 79 and yandex s3 stop get objects benchmark node 79: 0:00:57.085510
+Time elapsed between yandex s3 start get objects benchmark node 45 and yandex s3 stop get objects benchmark node 45: 0:00:57.556442
+Time elapsed between yandex s3 start get objects benchmark node 54 and yandex s3 stop get objects benchmark node 54: 0:00:57.625343
+Time elapsed between yandex s3 start get objects benchmark node 29 and yandex s3 stop get objects benchmark node 29: 0:00:57.896887
+Time elapsed between yandex s3 start get objects benchmark node 35 and yandex s3 stop get objects benchmark node 35: 0:00:57.884393
+Time elapsed between yandex s3 start get objects benchmark node 76 and yandex s3 stop get objects benchmark node 76: 0:00:57.563419
+Time elapsed between yandex s3 start get objects benchmark node 104 and yandex s3 stop get objects benchmark node 104: 0:00:57.573778
+Time elapsed between yandex s3 start get objects benchmark node 28 and yandex s3 stop get objects benchmark node 28: 0:00:58.462949
+Time elapsed between yandex s3 start get objects benchmark node 61 and yandex s3 stop get objects benchmark node 61: 0:00:59.015477
+Time elapsed between yandex s3 start get objects benchmark node 44 and yandex s3 stop get objects benchmark node 44: 0:00:59.423556
+Time elapsed between yandex s3 start get objects benchmark node 48 and yandex s3 stop get objects benchmark node 48: 0:00:59.510079
+Time elapsed between yandex s3 start get objects benchmark node 33 and yandex s3 stop get objects benchmark node 33: 0:00:59.985299
+Time elapsed between yandex s3 start get objects benchmark node 36 and yandex s3 stop get objects benchmark node 36: 0:01:00.376810
+Time elapsed between yandex s3 start get objects benchmark node 102 and yandex s3 stop get objects benchmark node 102: 0:00:59.959041
+Time elapsed between yandex s3 start get objects benchmark node 91 and yandex s3 stop get objects benchmark node 91: 0:01:00.021243
+Time elapsed between yandex s3 start get objects benchmark node 66 and yandex s3 stop get objects benchmark node 66: 0:01:00.619385
+Time elapsed between yandex s3 start get objects benchmark node 55 and yandex s3 stop get objects benchmark node 55: 0:01:00.713950
+Time elapsed between yandex s3 start get objects benchmark node 30 and yandex s3 stop get objects benchmark node 30: 0:01:01.250128
+Time elapsed between yandex s3 start get objects benchmark node 9 and yandex s3 stop get objects benchmark node 9: 0:01:01.539538
+Time elapsed between yandex s3 start get objects benchmark node 105 and yandex s3 stop get objects benchmark node 105: 0:01:01.118361
+Time elapsed between yandex s3 start get objects benchmark node 106 and yandex s3 stop get objects benchmark node 106: 0:01:01.181566
+Time elapsed between yandex s3 start get objects benchmark node 53 and yandex s3 stop get objects benchmark node 53: 0:01:01.749667
+Time elapsed between yandex s3 start get objects benchmark node 6 and yandex s3 stop get objects benchmark node 6: 0:01:02.242543
+Time elapsed between yandex s3 start get objects benchmark node 75 and yandex s3 stop get objects benchmark node 75: 0:01:01.795049
+Time elapsed between yandex s3 start get objects benchmark node 46 and yandex s3 stop get objects benchmark node 46: 0:01:02.122759
+Time elapsed between yandex s3 start get objects benchmark node 4 and yandex s3 stop get objects benchmark node 4: 0:01:02.393527
+Time elapsed between yandex s3 start get objects benchmark node 69 and yandex s3 stop get objects benchmark node 69: 0:01:02.023043
+Time elapsed between yandex s3 start get objects benchmark node 32 and yandex s3 stop get objects benchmark node 32: 0:01:02.469686
+Time elapsed between yandex s3 start get objects benchmark node 20 and yandex s3 stop get objects benchmark node 20: 0:01:02.702492
+Time elapsed between yandex s3 start get objects benchmark node 12 and yandex s3 stop get objects benchmark node 12: 0:01:02.862109
+Time elapsed between yandex s3 start get objects benchmark node 62 and yandex s3 stop get objects benchmark node 62: 0:01:02.687239
+Time elapsed between yandex s3 start get objects benchmark node 11 and yandex s3 stop get objects benchmark node 11: 0:01:03.133783
+Time elapsed between yandex s3 start get objects benchmark node 52 and yandex s3 stop get objects benchmark node 52: 0:01:02.883450
+Time elapsed between yandex s3 start get objects benchmark node 16 and yandex s3 stop get objects benchmark node 16: 0:01:03.622250
+Time elapsed between yandex s3 start get objects benchmark node 109 and yandex s3 stop get objects benchmark node 109: 0:01:03.144409
+Time elapsed between yandex s3 start get objects benchmark node 117 and yandex s3 stop get objects benchmark node 117: 0:01:03.135367
+Time elapsed between yandex s3 start get objects benchmark node 77 and yandex s3 stop get objects benchmark node 77: 0:01:03.496971
+Time elapsed between yandex s3 start get objects benchmark node 124 and yandex s3 stop get objects benchmark node 124: 0:01:03.173635
+Time elapsed between yandex s3 start get objects benchmark node 15 and yandex s3 stop get objects benchmark node 15: 0:01:04.190018
+Time elapsed between yandex s3 start get objects benchmark node 56 and yandex s3 stop get objects benchmark node 56: 0:01:04.071496
+Time elapsed between yandex s3 start get objects benchmark node 47 and yandex s3 stop get objects benchmark node 47: 0:01:04.260381
+Time elapsed between yandex s3 start get objects benchmark node 3 and yandex s3 stop get objects benchmark node 3: 0:01:04.837384
+Time elapsed between yandex s3 start get objects benchmark node 50 and yandex s3 stop get objects benchmark node 50: 0:01:04.572300
+Time elapsed between yandex s3 start get objects benchmark node 18 and yandex s3 stop get objects benchmark node 18: 0:01:05.267871
+Time elapsed between yandex s3 start get objects benchmark node 82 and yandex s3 stop get objects benchmark node 82: 0:01:05.025280
+Time elapsed between yandex s3 start get objects benchmark node 74 and yandex s3 stop get objects benchmark node 74: 0:01:05.568341
+Time elapsed between yandex s3 start get objects benchmark node 100 and yandex s3 stop get objects benchmark node 100: 0:01:05.436384
+Time elapsed between yandex s3 start get objects benchmark node 25 and yandex s3 stop get objects benchmark node 25: 0:01:06.139165
+Time elapsed between yandex s3 start get objects benchmark node 78 and yandex s3 stop get objects benchmark node 78: 0:01:05.799532
+Time elapsed between yandex s3 start get objects benchmark node 86 and yandex s3 stop get objects benchmark node 86: 0:01:05.691103
+Time elapsed between yandex s3 start get objects benchmark node 112 and yandex s3 stop get objects benchmark node 112: 0:01:05.883754
+Time elapsed between yandex s3 start get objects benchmark node 40 and yandex s3 stop get objects benchmark node 40: 0:01:06.489456
+Time elapsed between yandex s3 start get objects benchmark node 121 and yandex s3 stop get objects benchmark node 121: 0:01:06.176706
+Time elapsed between yandex s3 start get objects benchmark node 68 and yandex s3 stop get objects benchmark node 68: 0:01:06.692193
+Time elapsed between yandex s3 start get objects benchmark node 67 and yandex s3 stop get objects benchmark node 67: 0:01:06.721666
+Time elapsed between yandex s3 start get objects benchmark node 122 and yandex s3 stop get objects benchmark node 122: 0:01:06.529003
+Time elapsed between yandex s3 start get objects benchmark node 19 and yandex s3 stop get objects benchmark node 19: 0:01:07.503094
+Time elapsed between yandex s3 start get objects benchmark node 70 and yandex s3 stop get objects benchmark node 70: 0:01:07.515376
+Time elapsed between yandex s3 start get objects benchmark node 103 and yandex s3 stop get objects benchmark node 103: 0:01:07.382992
+Time elapsed between yandex s3 start get objects benchmark node 38 and yandex s3 stop get objects benchmark node 38: 0:01:07.952280
+Time elapsed between yandex s3 start get objects benchmark node 127 and yandex s3 stop get objects benchmark node 127: 0:01:07.247278
+Time elapsed between yandex s3 start get objects benchmark node 126 and yandex s3 stop get objects benchmark node 126: 0:01:07.269311
+Time elapsed between yandex s3 start get objects benchmark node 58 and yandex s3 stop get objects benchmark node 58: 0:01:07.920340
+Time elapsed between yandex s3 start get objects benchmark node 116 and yandex s3 stop get objects benchmark node 116: 0:01:08.254762
+Time elapsed between yandex s3 start get objects benchmark node 37 and yandex s3 stop get objects benchmark node 37: 0:01:09.653376
+Time elapsed between yandex s3 start get objects benchmark node 98 and yandex s3 stop get objects benchmark node 98: 0:01:09.404657
+Time elapsed between yandex s3 start get objects benchmark node 59 and yandex s3 stop get objects benchmark node 59: 0:01:10.046126
+Time elapsed between yandex s3 start get objects benchmark node 64 and yandex s3 stop get objects benchmark node 64: 0:01:10.155117
+Time elapsed between yandex s3 start get objects benchmark node 63 and yandex s3 stop get objects benchmark node 63: 0:01:10.248566
+Time elapsed between yandex s3 start get objects benchmark node 113 and yandex s3 stop get objects benchmark node 113: 0:01:09.848587
+Time elapsed between yandex s3 start get objects benchmark node 43 and yandex s3 stop get objects benchmark node 43: 0:01:11.378288
+Time elapsed between yandex s3 start get objects benchmark node 101 and yandex s3 stop get objects benchmark node 101: 0:01:11.034042
+Time elapsed between yandex s3 start get objects benchmark node 42 and yandex s3 stop get objects benchmark node 42: 0:01:11.644246
+Time elapsed between yandex s3 start get objects benchmark node 96 and yandex s3 stop get objects benchmark node 96: 0:01:11.281288
+Time elapsed between yandex s3 start get objects benchmark node 71 and yandex s3 stop get objects benchmark node 71: 0:01:12.218087
+Time elapsed between yandex s3 start get objects benchmark node 119 and yandex s3 stop get objects benchmark node 119: 0:01:11.977647
+Time elapsed between yandex s3 start get objects benchmark node 107 and yandex s3 stop get objects benchmark node 107: 0:01:13.457285
+Time elapsed between yandex s3 start get objects benchmark node 14 and yandex s3 stop get objects benchmark node 14: 0:01:14.230317
+Time elapsed between yandex s3 start get objects benchmark node 85 and yandex s3 stop get objects benchmark node 85: 0:01:14.828218
+Time elapsed between yandex s3 start get objects benchmark node 94 and yandex s3 stop get objects benchmark node 94: 0:01:17.427091
+Time elapsed between yandex s3 start get objects benchmark node 81 and yandex s3 stop get objects benchmark node 81: 0:01:19.412361
+Time elapsed between yandex s3 start get objects benchmark node 110 and yandex s3 stop get objects benchmark node 110: 0:01:19.291848
+Time elapsed between yandex s3 start get objects benchmark node 1 and yandex s3 stop get objects benchmark node 1: 0:01:20.420127
+Time elapsed between yandex s3 start get objects benchmark node 125 and yandex s3 stop get objects benchmark node 125: 0:01:20.125205
+Time elapsed between yandex s3 start get objects benchmark node 80 and yandex s3 stop get objects benchmark node 80: 0:01:22.067989
+Time elapsed between yandex s3 start get objects benchmark node 27 and yandex s3 stop get objects benchmark node 27: 0:02:01.898503
+Time elapsed between yandex s3 start get objects benchmark node 57 and yandex s3 stop get objects benchmark node 57: 0:02:02.374733
+Time elapsed between yandex s3 start get objects benchmark node 99 and yandex s3 stop get objects benchmark node 99: 0:02:02.975565
+Time elapsed between yandex s3 start get objects benchmark node 95 and yandex s3 stop get objects benchmark node 95: 0:02:05.374155
+Time elapsed between yandex s3 start get objects benchmark node 123 and yandex s3 stop get objects benchmark node 123: 0:02:08.047950
+Time elapsed between yandex s3 start get objects benchmark node 83 and yandex s3 stop get objects benchmark node 83: 0:02:08.786968
+Time elapsed between yandex s3 start get objects benchmark node 87 and yandex s3 stop get objects benchmark node 87: 0:02:09.755808
+Time elapsed between yandex s3 start get objects benchmark node 65 and yandex s3 stop get objects benchmark node 65: 0:02:11.453083
+--------------------------- YANDEX DOWNLOAD S3 BENCHMARK STOP  ---------------------------
+---------------------------- DROPBOX DOWNLOAD BENCHMARK START ----------------------------
+***STARTING BENCHMARK FOR: 1 nodes***
+Time elapsed between dropbox start download files images15/ node 0 and dropbox stop download files images15/ node 0: 0:00:12.927032
+***STARTING BENCHMARK FOR: 2 nodes***
+Time elapsed between dropbox start download files images15/ node 1 and dropbox stop download files images15/ node 1: 0:00:13.054434
+Time elapsed between dropbox start download files images15/ node 0 and dropbox stop download files images15/ node 0: 0:00:14.099026
+***STARTING BENCHMARK FOR: 4 nodes***
+Time elapsed between dropbox start download files images15/ node 1 and dropbox stop download files images15/ node 1: 0:00:13.065182
+Time elapsed between dropbox start download files images15/ node 3 and dropbox stop download files images15/ node 3: 0:00:13.933970
+Time elapsed between dropbox start download files images15/ node 2 and dropbox stop download files images15/ node 2: 0:00:14.122193
+Time elapsed between dropbox start download files images15/ node 0 and dropbox stop download files images15/ node 0: 0:00:14.820658
+***STARTING BENCHMARK FOR: 8 nodes***
+Time elapsed between dropbox start download files images15/ node 4 and dropbox stop download files images15/ node 4: 0:00:13.959427
+Time elapsed between dropbox start download files images15/ node 1 and dropbox stop download files images15/ node 1: 0:00:14.015093
+Time elapsed between dropbox start download files images15/ node 2 and dropbox stop download files images15/ node 2: 0:00:14.559519
+Time elapsed between dropbox start download files images15/ node 6 and dropbox stop download files images15/ node 6: 0:00:14.594041
+Time elapsed between dropbox start download files images15/ node 5 and dropbox stop download files images15/ node 5: 0:00:14.611764
+Time elapsed between dropbox start download files images15/ node 0 and dropbox stop download files images15/ node 0: 0:00:14.879812
+Time elapsed between dropbox start download files images15/ node 3 and dropbox stop download files images15/ node 3: 0:00:15.053342
+Time elapsed between dropbox start download files images15/ node 7 and dropbox stop download files images15/ node 7: 0:00:17.555585
+***STARTING BENCHMARK FOR: 16 nodes***
+Time elapsed between dropbox start download files images15/ node 3 and dropbox stop download files images15/ node 3: 0:00:13.232649
+Time elapsed between dropbox start download files images15/ node 9 and dropbox stop download files images15/ node 9: 0:00:13.577261
+Time elapsed between dropbox start download files images15/ node 6 and dropbox stop download files images15/ node 6: 0:00:14.129415
+Time elapsed between dropbox start download files images15/ node 15 and dropbox stop download files images15/ node 15: 0:00:14.129141
+Time elapsed between dropbox start download files images15/ node 14 and dropbox stop download files images15/ node 14: 0:00:14.235814
+Time elapsed between dropbox start download files images15/ node 7 and dropbox stop download files images15/ node 7: 0:00:14.357982
+Time elapsed between dropbox start download files images15/ node 5 and dropbox stop download files images15/ node 5: 0:00:14.809275
+Time elapsed between dropbox start download files images15/ node 13 and dropbox stop download files images15/ node 13: 0:00:14.953221
+Time elapsed between dropbox start download files images15/ node 8 and dropbox stop download files images15/ node 8: 0:00:14.995012
+Time elapsed between dropbox start download files images15/ node 1 and dropbox stop download files images15/ node 1: 0:00:15.416566
+Time elapsed between dropbox start download files images15/ node 2 and dropbox stop download files images15/ node 2: 0:00:15.596042
+Time elapsed between dropbox start download files images15/ node 10 and dropbox stop download files images15/ node 10: 0:00:15.762900
+Time elapsed between dropbox start download files images15/ node 11 and dropbox stop download files images15/ node 11: 0:00:15.938838
+Time elapsed between dropbox start download files images15/ node 4 and dropbox stop download files images15/ node 4: 0:00:16.124577
+Time elapsed between dropbox start download files images15/ node 0 and dropbox stop download files images15/ node 0: 0:00:16.495509
+Time elapsed between dropbox start download files images15/ node 12 and dropbox stop download files images15/ node 12: 0:00:17.078514
+***STARTING BENCHMARK FOR: 32 nodes***
+Time elapsed between dropbox start download files images15/ node 23 and dropbox stop download files images15/ node 23: 0:00:17.397116
+Time elapsed between dropbox start download files images15/ node 6 and dropbox stop download files images15/ node 6: 0:00:18.052065
+Time elapsed between dropbox start download files images15/ node 10 and dropbox stop download files images15/ node 10: 0:00:18.354095
+Time elapsed between dropbox start download files images15/ node 2 and dropbox stop download files images15/ node 2: 0:00:18.375318
+Time elapsed between dropbox start download files images15/ node 18 and dropbox stop download files images15/ node 18: 0:00:18.369390
+Time elapsed between dropbox start download files images15/ node 3 and dropbox stop download files images15/ node 3: 0:00:19.351948
+Time elapsed between dropbox start download files images15/ node 24 and dropbox stop download files images15/ node 24: 0:00:19.401619
+Time elapsed between dropbox start download files images15/ node 28 and dropbox stop download files images15/ node 28: 0:00:19.415540
+Time elapsed between dropbox start download files images15/ node 19 and dropbox stop download files images15/ node 19: 0:00:19.471762
+Time elapsed between dropbox start download files images15/ node 0 and dropbox stop download files images15/ node 0: 0:00:19.851298
+Time elapsed between dropbox start download files images15/ node 29 and dropbox stop download files images15/ node 29: 0:00:20.586951
+Time elapsed between dropbox start download files images15/ node 27 and dropbox stop download files images15/ node 27: 0:00:20.655513
+Time elapsed between dropbox start download files images15/ node 15 and dropbox stop download files images15/ node 15: 0:00:20.769362
+Time elapsed between dropbox start download files images15/ node 5 and dropbox stop download files images15/ node 5: 0:00:20.941651
+Time elapsed between dropbox start download files images15/ node 12 and dropbox stop download files images15/ node 12: 0:00:20.949634
+Time elapsed between dropbox start download files images15/ node 1 and dropbox stop download files images15/ node 1: 0:00:21.210051
+Time elapsed between dropbox start download files images15/ node 7 and dropbox stop download files images15/ node 7: 0:00:21.488434
+Time elapsed between dropbox start download files images15/ node 30 and dropbox stop download files images15/ node 30: 0:00:21.475871
+Time elapsed between dropbox start download files images15/ node 25 and dropbox stop download files images15/ node 25: 0:00:21.490913
+Time elapsed between dropbox start download files images15/ node 21 and dropbox stop download files images15/ node 21: 0:00:21.571305
+Time elapsed between dropbox start download files images15/ node 14 and dropbox stop download files images15/ node 14: 0:00:21.581946
+Time elapsed between dropbox start download files images15/ node 8 and dropbox stop download files images15/ node 8: 0:00:21.802079
+Time elapsed between dropbox start download files images15/ node 4 and dropbox stop download files images15/ node 4: 0:00:22.051181
+Time elapsed between dropbox start download files images15/ node 17 and dropbox stop download files images15/ node 17: 0:00:22.087063
+Time elapsed between dropbox start download files images15/ node 26 and dropbox stop download files images15/ node 26: 0:00:22.113556
+Time elapsed between dropbox start download files images15/ node 20 and dropbox stop download files images15/ node 20: 0:00:22.130349
+Time elapsed between dropbox start download files images15/ node 11 and dropbox stop download files images15/ node 11: 0:00:22.177954
+Time elapsed between dropbox start download files images15/ node 22 and dropbox stop download files images15/ node 22: 0:00:22.517675
+Time elapsed between dropbox start download files images15/ node 9 and dropbox stop download files images15/ node 9: 0:00:22.807418
+Time elapsed between dropbox start download files images15/ node 13 and dropbox stop download files images15/ node 13: 0:00:23.077424
+Time elapsed between dropbox start download files images15/ node 31 and dropbox stop download files images15/ node 31: 0:00:23.632725
+Time elapsed between dropbox start download files images15/ node 16 and dropbox stop download files images15/ node 16: 0:00:23.999031
+***STARTING BENCHMARK FOR: 64 nodes***
+Time elapsed between dropbox start download files images15/ node 62 and dropbox stop download files images15/ node 62: 0:00:22.732289
+Time elapsed between dropbox start download files images15/ node 20 and dropbox stop download files images15/ node 20: 0:00:23.437125
+Time elapsed between dropbox start download files images15/ node 55 and dropbox stop download files images15/ node 55: 0:00:24.956182
+Time elapsed between dropbox start download files images15/ node 39 and dropbox stop download files images15/ node 39: 0:00:25.454945
+Time elapsed between dropbox start download files images15/ node 38 and dropbox stop download files images15/ node 38: 0:00:25.506022
+Time elapsed between dropbox start download files images15/ node 47 and dropbox stop download files images15/ node 47: 0:00:27.696984
+Time elapsed between dropbox start download files images15/ node 42 and dropbox stop download files images15/ node 42: 0:00:28.004952
+Time elapsed between dropbox start download files images15/ node 36 and dropbox stop download files images15/ node 36: 0:00:28.554769
+Time elapsed between dropbox start download files images15/ node 26 and dropbox stop download files images15/ node 26: 0:00:28.826430
+Time elapsed between dropbox start download files images15/ node 18 and dropbox stop download files images15/ node 18: 0:00:29.194793
+Time elapsed between dropbox start download files images15/ node 5 and dropbox stop download files images15/ node 5: 0:00:29.325720
+Time elapsed between dropbox start download files images15/ node 4 and dropbox stop download files images15/ node 4: 0:00:29.925083
+Time elapsed between dropbox start download files images15/ node 31 and dropbox stop download files images15/ node 31: 0:00:29.926505
+Time elapsed between dropbox start download files images15/ node 49 and dropbox stop download files images15/ node 49: 0:00:29.984770
+Time elapsed between dropbox start download files images15/ node 30 and dropbox stop download files images15/ node 30: 0:00:30.708498
+Time elapsed between dropbox start download files images15/ node 43 and dropbox stop download files images15/ node 43: 0:00:30.814477
+Time elapsed between dropbox start download files images15/ node 22 and dropbox stop download files images15/ node 22: 0:00:30.920080
+Time elapsed between dropbox start download files images15/ node 9 and dropbox stop download files images15/ node 9: 0:00:31.029744
+Time elapsed between dropbox start download files images15/ node 27 and dropbox stop download files images15/ node 27: 0:00:31.152929
+Time elapsed between dropbox start download files images15/ node 48 and dropbox stop download files images15/ node 48: 0:00:31.130993
+Time elapsed between dropbox start download files images15/ node 44 and dropbox stop download files images15/ node 44: 0:00:31.175631
+Time elapsed between dropbox start download files images15/ node 13 and dropbox stop download files images15/ node 13: 0:00:31.212749
+Time elapsed between dropbox start download files images15/ node 35 and dropbox stop download files images15/ node 35: 0:00:31.291536
+Time elapsed between dropbox start download files images15/ node 2 and dropbox stop download files images15/ node 2: 0:00:31.489480
+Time elapsed between dropbox start download files images15/ node 11 and dropbox stop download files images15/ node 11: 0:00:31.623952
+Time elapsed between dropbox start download files images15/ node 17 and dropbox stop download files images15/ node 17: 0:00:32.073353
+Time elapsed between dropbox start download files images15/ node 56 and dropbox stop download files images15/ node 56: 0:00:32.726575
+Time elapsed between dropbox start download files images15/ node 46 and dropbox stop download files images15/ node 46: 0:00:32.790567
+Time elapsed between dropbox start download files images15/ node 33 and dropbox stop download files images15/ node 33: 0:00:33.108772
+Time elapsed between dropbox start download files images15/ node 16 and dropbox stop download files images15/ node 16: 0:00:33.186980
+Time elapsed between dropbox start download files images15/ node 51 and dropbox stop download files images15/ node 51: 0:00:33.233551
+Time elapsed between dropbox start download files images15/ node 54 and dropbox stop download files images15/ node 54: 0:00:33.763553
+Time elapsed between dropbox start download files images15/ node 37 and dropbox stop download files images15/ node 37: 0:00:33.833991
+Time elapsed between dropbox start download files images15/ node 1 and dropbox stop download files images15/ node 1: 0:00:33.892151
+Time elapsed between dropbox start download files images15/ node 15 and dropbox stop download files images15/ node 15: 0:00:33.884129
+Time elapsed between dropbox start download files images15/ node 28 and dropbox stop download files images15/ node 28: 0:00:33.970845
+Time elapsed between dropbox start download files images15/ node 45 and dropbox stop download files images15/ node 45: 0:00:33.984278
+Time elapsed between dropbox start download files images15/ node 14 and dropbox stop download files images15/ node 14: 0:00:34.075400
+Time elapsed between dropbox start download files images15/ node 58 and dropbox stop download files images15/ node 58: 0:00:34.097423
+Time elapsed between dropbox start download files images15/ node 29 and dropbox stop download files images15/ node 29: 0:00:34.262860
+Time elapsed between dropbox start download files images15/ node 53 and dropbox stop download files images15/ node 53: 0:00:34.940272
+Time elapsed between dropbox start download files images15/ node 10 and dropbox stop download files images15/ node 10: 0:00:35.096994
+Time elapsed between dropbox start download files images15/ node 19 and dropbox stop download files images15/ node 19: 0:00:35.198386
+Time elapsed between dropbox start download files images15/ node 7 and dropbox stop download files images15/ node 7: 0:00:35.403988
+Time elapsed between dropbox start download files images15/ node 6 and dropbox stop download files images15/ node 6: 0:00:35.480303
+Time elapsed between dropbox start download files images15/ node 32 and dropbox stop download files images15/ node 32: 0:00:36.062573
+Time elapsed between dropbox start download files images15/ node 60 and dropbox stop download files images15/ node 60: 0:00:36.502976
+Time elapsed between dropbox start download files images15/ node 57 and dropbox stop download files images15/ node 57: 0:00:36.571095
+Time elapsed between dropbox start download files images15/ node 0 and dropbox stop download files images15/ node 0: 0:00:36.995923
+Time elapsed between dropbox start download files images15/ node 24 and dropbox stop download files images15/ node 24: 0:00:37.186615
+Time elapsed between dropbox start download files images15/ node 12 and dropbox stop download files images15/ node 12: 0:00:38.047625
+Time elapsed between dropbox start download files images15/ node 3 and dropbox stop download files images15/ node 3: 0:00:38.304567
+Time elapsed between dropbox start download files images15/ node 23 and dropbox stop download files images15/ node 23: 0:00:38.301016
+Time elapsed between dropbox start download files images15/ node 59 and dropbox stop download files images15/ node 59: 0:00:38.360350
+Time elapsed between dropbox start download files images15/ node 34 and dropbox stop download files images15/ node 34: 0:00:38.460013
+Time elapsed between dropbox start download files images15/ node 25 and dropbox stop download files images15/ node 25: 0:00:38.487607
+Time elapsed between dropbox start download files images15/ node 63 and dropbox stop download files images15/ node 63: 0:00:38.571849
+Time elapsed between dropbox start download files images15/ node 8 and dropbox stop download files images15/ node 8: 0:00:39.034586
+Time elapsed between dropbox start download files images15/ node 50 and dropbox stop download files images15/ node 50: 0:00:39.642858
+Time elapsed between dropbox start download files images15/ node 52 and dropbox stop download files images15/ node 52: 0:00:40.525584
+Time elapsed between dropbox start download files images15/ node 61 and dropbox stop download files images15/ node 61: 0:00:40.963396
+Time elapsed between dropbox start download files images15/ node 40 and dropbox stop download files images15/ node 40: 0:00:41.238761
+Time elapsed between dropbox start download files images15/ node 21 and dropbox stop download files images15/ node 21: 0:00:41.418599
+Time elapsed between dropbox start download files images15/ node 41 and dropbox stop download files images15/ node 41: 0:00:56.555762
+***STARTING BENCHMARK FOR: 128 nodes***
+Time elapsed between dropbox start download files images15/ node 21 and dropbox stop download files images15/ node 21: 0:00:45.597140
+Time elapsed between dropbox start download files images15/ node 57 and dropbox stop download files images15/ node 57: 0:00:46.773558
+Time elapsed between dropbox start download files images15/ node 70 and dropbox stop download files images15/ node 70: 0:00:46.982039
+Time elapsed between dropbox start download files images15/ node 15 and dropbox stop download files images15/ node 15: 0:00:47.848391
+Time elapsed between dropbox start download files images15/ node 12 and dropbox stop download files images15/ node 12: 0:00:49.012900
+Time elapsed between dropbox start download files images15/ node 27 and dropbox stop download files images15/ node 27: 0:00:51.149689
+Time elapsed between dropbox start download files images15/ node 123 and dropbox stop download files images15/ node 123: 0:00:50.843327
+Time elapsed between dropbox start download files images15/ node 87 and dropbox stop download files images15/ node 87: 0:00:51.193309
+Time elapsed between dropbox start download files images15/ node 19 and dropbox stop download files images15/ node 19: 0:00:52.765656
+Time elapsed between dropbox start download files images15/ node 7 and dropbox stop download files images15/ node 7: 0:00:53.104420
+Time elapsed between dropbox start download files images15/ node 58 and dropbox stop download files images15/ node 58: 0:00:53.250343
+Time elapsed between dropbox start download files images15/ node 54 and dropbox stop download files images15/ node 54: 0:00:53.611806
+Time elapsed between dropbox start download files images15/ node 9 and dropbox stop download files images15/ node 9: 0:00:53.899550
+Time elapsed between dropbox start download files images15/ node 31 and dropbox stop download files images15/ node 31: 0:00:53.929774
+Time elapsed between dropbox start download files images15/ node 121 and dropbox stop download files images15/ node 121: 0:00:53.677725
+Time elapsed between dropbox start download files images15/ node 56 and dropbox stop download files images15/ node 56: 0:00:53.971011
+Time elapsed between dropbox start download files images15/ node 2 and dropbox stop download files images15/ node 2: 0:00:54.212441
+Time elapsed between dropbox start download files images15/ node 46 and dropbox stop download files images15/ node 46: 0:00:54.329792
+Time elapsed between dropbox start download files images15/ node 33 and dropbox stop download files images15/ node 33: 0:00:54.481705
+Time elapsed between dropbox start download files images15/ node 38 and dropbox stop download files images15/ node 38: 0:00:54.483583
+Time elapsed between dropbox start download files images15/ node 116 and dropbox stop download files images15/ node 116: 0:00:54.675349
+Time elapsed between dropbox start download files images15/ node 109 and dropbox stop download files images15/ node 109: 0:00:55.118364
+Time elapsed between dropbox start download files images15/ node 36 and dropbox stop download files images15/ node 36: 0:00:55.247778
+Time elapsed between dropbox start download files images15/ node 67 and dropbox stop download files images15/ node 67: 0:00:55.560013
+Time elapsed between dropbox start download files images15/ node 111 and dropbox stop download files images15/ node 111: 0:00:55.620495
+Time elapsed between dropbox start download files images15/ node 53 and dropbox stop download files images15/ node 53: 0:00:56.602409
+Time elapsed between dropbox start download files images15/ node 49 and dropbox stop download files images15/ node 49: 0:00:56.637217
+Time elapsed between dropbox start download files images15/ node 35 and dropbox stop download files images15/ node 35: 0:00:56.681161
+Time elapsed between dropbox start download files images15/ node 75 and dropbox stop download files images15/ node 75: 0:00:56.998178
+Time elapsed between dropbox start download files images15/ node 11 and dropbox stop download files images15/ node 11: 0:00:57.450734
+Time elapsed between dropbox start download files images15/ node 90 and dropbox stop download files images15/ node 90: 0:00:57.355942
+Time elapsed between dropbox start download files images15/ node 127 and dropbox stop download files images15/ node 127: 0:00:57.728472
+Time elapsed between dropbox start download files images15/ node 32 and dropbox stop download files images15/ node 32: 0:00:58.325892
+Time elapsed between dropbox start download files images15/ node 48 and dropbox stop download files images15/ node 48: 0:00:58.530556
+Time elapsed between dropbox start download files images15/ node 13 and dropbox stop download files images15/ node 13: 0:00:58.993747
+Time elapsed between dropbox start download files images15/ node 39 and dropbox stop download files images15/ node 39: 0:00:59.294538
+Time elapsed between dropbox start download files images15/ node 113 and dropbox stop download files images15/ node 113: 0:00:59.240551
+Time elapsed between dropbox start download files images15/ node 103 and dropbox stop download files images15/ node 103: 0:00:59.267142
+Time elapsed between dropbox start download files images15/ node 93 and dropbox stop download files images15/ node 93: 0:00:59.319313
+Time elapsed between dropbox start download files images15/ node 107 and dropbox stop download files images15/ node 107: 0:00:59.330223
+Time elapsed between dropbox start download files images15/ node 96 and dropbox stop download files images15/ node 96: 0:00:59.356104
+Time elapsed between dropbox start download files images15/ node 124 and dropbox stop download files images15/ node 124: 0:00:59.719982
+Time elapsed between dropbox start download files images15/ node 95 and dropbox stop download files images15/ node 95: 0:01:00.101964
+Time elapsed between dropbox start download files images15/ node 80 and dropbox stop download files images15/ node 80: 0:01:00.286884
+Time elapsed between dropbox start download files images15/ node 17 and dropbox stop download files images15/ node 17: 0:01:00.373526
+Time elapsed between dropbox start download files images15/ node 10 and dropbox stop download files images15/ node 10: 0:01:00.870707
+Time elapsed between dropbox start download files images15/ node 71 and dropbox stop download files images15/ node 71: 0:01:00.867382
+Time elapsed between dropbox start download files images15/ node 24 and dropbox stop download files images15/ node 24: 0:01:01.143370
+Time elapsed between dropbox start download files images15/ node 69 and dropbox stop download files images15/ node 69: 0:01:01.161176
+Time elapsed between dropbox start download files images15/ node 88 and dropbox stop download files images15/ node 88: 0:01:01.226627
+Time elapsed between dropbox start download files images15/ node 6 and dropbox stop download files images15/ node 6: 0:01:01.370413
+Time elapsed between dropbox start download files images15/ node 85 and dropbox stop download files images15/ node 85: 0:01:01.443806
+Time elapsed between dropbox start download files images15/ node 81 and dropbox stop download files images15/ node 81: 0:01:01.514461
+Time elapsed between dropbox start download files images15/ node 78 and dropbox stop download files images15/ node 78: 0:01:01.540279
+Time elapsed between dropbox start download files images15/ node 74 and dropbox stop download files images15/ node 74: 0:01:01.784985
+Time elapsed between dropbox start download files images15/ node 4 and dropbox stop download files images15/ node 4: 0:01:01.899466
+Time elapsed between dropbox start download files images15/ node 50 and dropbox stop download files images15/ node 50: 0:01:02.583811
+Time elapsed between dropbox start download files images15/ node 84 and dropbox stop download files images15/ node 84: 0:01:02.867593
+Time elapsed between dropbox start download files images15/ node 41 and dropbox stop download files images15/ node 41: 0:01:03.082575
+Time elapsed between dropbox start download files images15/ node 28 and dropbox stop download files images15/ node 28: 0:01:03.114914
+Time elapsed between dropbox start download files images15/ node 25 and dropbox stop download files images15/ node 25: 0:01:03.205236
+Time elapsed between dropbox start download files images15/ node 83 and dropbox stop download files images15/ node 83: 0:01:03.331759
+Time elapsed between dropbox start download files images15/ node 119 and dropbox stop download files images15/ node 119: 0:01:03.349257
+Time elapsed between dropbox start download files images15/ node 122 and dropbox stop download files images15/ node 122: 0:01:03.283596
+Time elapsed between dropbox start download files images15/ node 22 and dropbox stop download files images15/ node 22: 0:01:03.675960
+Time elapsed between dropbox start download files images15/ node 63 and dropbox stop download files images15/ node 63: 0:01:03.627262
+Time elapsed between dropbox start download files images15/ node 108 and dropbox stop download files images15/ node 108: 0:01:03.702072
+Time elapsed between dropbox start download files images15/ node 37 and dropbox stop download files images15/ node 37: 0:01:03.846158
+Time elapsed between dropbox start download files images15/ node 59 and dropbox stop download files images15/ node 59: 0:01:03.832232
+Time elapsed between dropbox start download files images15/ node 47 and dropbox stop download files images15/ node 47: 0:01:03.856991
+Time elapsed between dropbox start download files images15/ node 34 and dropbox stop download files images15/ node 34: 0:01:04.067563
+Time elapsed between dropbox start download files images15/ node 110 and dropbox stop download files images15/ node 110: 0:01:04.158057
+Time elapsed between dropbox start download files images15/ node 29 and dropbox stop download files images15/ node 29: 0:01:04.443680
+Time elapsed between dropbox start download files images15/ node 51 and dropbox stop download files images15/ node 51: 0:01:04.489804
+Time elapsed between dropbox start download files images15/ node 91 and dropbox stop download files images15/ node 91: 0:01:04.492974
+Time elapsed between dropbox start download files images15/ node 102 and dropbox stop download files images15/ node 102: 0:01:04.561385
+Time elapsed between dropbox start download files images15/ node 125 and dropbox stop download files images15/ node 125: 0:01:04.428631
+Time elapsed between dropbox start download files images15/ node 73 and dropbox stop download files images15/ node 73: 0:01:04.816068
+Time elapsed between dropbox start download files images15/ node 26 and dropbox stop download files images15/ node 26: 0:01:04.927114
+Time elapsed between dropbox start download files images15/ node 79 and dropbox stop download files images15/ node 79: 0:01:05.004449
+Time elapsed between dropbox start download files images15/ node 23 and dropbox stop download files images15/ node 23: 0:01:05.117809
+Time elapsed between dropbox start download files images15/ node 106 and dropbox stop download files images15/ node 106: 0:01:05.049877
+Time elapsed between dropbox start download files images15/ node 55 and dropbox stop download files images15/ node 55: 0:01:05.281900
+Time elapsed between dropbox start download files images15/ node 101 and dropbox stop download files images15/ node 101: 0:01:05.582534
+Time elapsed between dropbox start download files images15/ node 61 and dropbox stop download files images15/ node 61: 0:01:05.794173
+Time elapsed between dropbox start download files images15/ node 94 and dropbox stop download files images15/ node 94: 0:01:05.966492
+Time elapsed between dropbox start download files images15/ node 43 and dropbox stop download files images15/ node 43: 0:01:06.341639
+Time elapsed between dropbox start download files images15/ node 62 and dropbox stop download files images15/ node 62: 0:01:06.421391
+Time elapsed between dropbox start download files images15/ node 114 and dropbox stop download files images15/ node 114: 0:01:06.383746
+Time elapsed between dropbox start download files images15/ node 77 and dropbox stop download files images15/ node 77: 0:01:06.620179
+Time elapsed between dropbox start download files images15/ node 3 and dropbox stop download files images15/ node 3: 0:01:06.910355
+Time elapsed between dropbox start download files images15/ node 8 and dropbox stop download files images15/ node 8: 0:01:07.058722
+Time elapsed between dropbox start download files images15/ node 16 and dropbox stop download files images15/ node 16: 0:01:07.773789
+Time elapsed between dropbox start download files images15/ node 40 and dropbox stop download files images15/ node 40: 0:01:07.760319
+Time elapsed between dropbox start download files images15/ node 68 and dropbox stop download files images15/ node 68: 0:01:07.794288
+Time elapsed between dropbox start download files images15/ node 115 and dropbox stop download files images15/ node 115: 0:01:08.002283
+Time elapsed between dropbox start download files images15/ node 42 and dropbox stop download files images15/ node 42: 0:01:08.334866
+Time elapsed between dropbox start download files images15/ node 118 and dropbox stop download files images15/ node 118: 0:01:08.518776
+Time elapsed between dropbox start download files images15/ node 45 and dropbox stop download files images15/ node 45: 0:01:08.758140
+Time elapsed between dropbox start download files images15/ node 99 and dropbox stop download files images15/ node 99: 0:01:08.797722
+Time elapsed between dropbox start download files images15/ node 112 and dropbox stop download files images15/ node 112: 0:01:08.976666
+Time elapsed between dropbox start download files images15/ node 117 and dropbox stop download files images15/ node 117: 0:01:08.993965
+Time elapsed between dropbox start download files images15/ node 120 and dropbox stop download files images15/ node 120: 0:01:08.938487
+Time elapsed between dropbox start download files images15/ node 14 and dropbox stop download files images15/ node 14: 0:01:09.317915
+Time elapsed between dropbox start download files images15/ node 72 and dropbox stop download files images15/ node 72: 0:01:09.635598
+Time elapsed between dropbox start download files images15/ node 0 and dropbox stop download files images15/ node 0: 0:01:09.867567
+Time elapsed between dropbox start download files images15/ node 105 and dropbox stop download files images15/ node 105: 0:01:09.899737
+Time elapsed between dropbox start download files images15/ node 30 and dropbox stop download files images15/ node 30: 0:01:09.996772
+Time elapsed between dropbox start download files images15/ node 97 and dropbox stop download files images15/ node 97: 0:01:10.260492
+Time elapsed between dropbox start download files images15/ node 64 and dropbox stop download files images15/ node 64: 0:01:10.992145
+Time elapsed between dropbox start download files images15/ node 18 and dropbox stop download files images15/ node 18: 0:01:11.287411
+Time elapsed between dropbox start download files images15/ node 5 and dropbox stop download files images15/ node 5: 0:01:11.342045
+Time elapsed between dropbox start download files images15/ node 1 and dropbox stop download files images15/ node 1: 0:01:11.872758
+Time elapsed between dropbox start download files images15/ node 20 and dropbox stop download files images15/ node 20: 0:01:13.189573
+Time elapsed between dropbox start download files images15/ node 98 and dropbox stop download files images15/ node 98: 0:01:13.246630
+Time elapsed between dropbox start download files images15/ node 104 and dropbox stop download files images15/ node 104: 0:01:13.845898
+Time elapsed between dropbox start download files images15/ node 126 and dropbox stop download files images15/ node 126: 0:01:14.475692
+Time elapsed between dropbox start download files images15/ node 52 and dropbox stop download files images15/ node 52: 0:01:15.028264
+Time elapsed between dropbox start download files images15/ node 89 and dropbox stop download files images15/ node 89: 0:01:17.434051
+Time elapsed between dropbox start download files images15/ node 100 and dropbox stop download files images15/ node 100: 0:01:17.419242
+Time elapsed between dropbox start download files images15/ node 86 and dropbox stop download files images15/ node 86: 0:01:17.483128
+Time elapsed between dropbox start download files images15/ node 76 and dropbox stop download files images15/ node 76: 0:01:19.653726
+Time elapsed between dropbox start download files images15/ node 82 and dropbox stop download files images15/ node 82: 0:01:20.737434
+Time elapsed between dropbox start download files images15/ node 60 and dropbox stop download files images15/ node 60: 0:01:21.864426
+Time elapsed between dropbox start download files images15/ node 92 and dropbox stop download files images15/ node 92: 0:01:49.979705
+---------------------------- DROPBOX DOWNLOAD BENCHMARK STOP  ----------------------------

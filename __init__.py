@@ -2,12 +2,13 @@ from dropbox_ import run_dropbox_benchmark, multiple_node_read as multiple_node_
 from yandex_s3 import run_yandex_benchmark, multiple_node_read as multiple_node_read_yandex
 import sys
 
+images1 = {"images1/": 1}
 images5 = {"images5/": 5}
 images15 = {"images15/": 15}
 images30 = {"images30/": 30}
 images100 = {"images100/": 100}
 
-images = [images5, images15, images30, images100]
+images_all = [images1, images5, images15, images30, images100]
 
 def header_upload() -> str:
     header = \
@@ -50,10 +51,14 @@ def header_multi_thread_download() -> str:
     "* Total node count: 4              *\n"\
     "* Total node count: 8              *\n"\
     "* Total node count: 16             *\n"\
-    "* Total node count: 32             *\n"\
+    "* Total node count: 64             *\n"\
+    "* Total node count: 128            *\n"\
+    "* Total node count: 256            *\n"\
+    "* Total node count: 512            *\n"\
+    "* Total node count: 1000           *\n"\
     "*                                  *\n"\
-    "* File count 30                    *\n"\
-    "* Average file size: 8200 bytes    *\n"\
+    "* File count 1                     *\n"\
+    "* File size: 82143 bytes           *\n"\
     "* File type: .jpg                  *\n"\
     "*                                  *\n"\
     "************************************\n"\
@@ -88,7 +93,7 @@ def header_all() -> str:
     "* Total node count: 32                                                             *\n"\
     "* Total node count: 64                                                             *\n"\
     "* Total node count: 128                                                            *\n"\
-    "* File count 30                                                                    *\n"\
+    "* File count 15                                                                    *\n"\
     "* Average file size: 8200 bytes                                                    *\n"\
     "* File type: .jpg                                                                  *\n"\
     "************************************************************************************\n"\
@@ -101,13 +106,15 @@ def write_and_print(text, overwrite=False):
     with open ('results.txt', 'a+' if not overwrite else 'w+') as results:
         results.writelines(text)
 
-def upload_share_download():
+def upload_share_download(images=None):
     # dropbox benchmark
+    if not images:
+        images = images_all
     write_and_print("---------------------------- DROPBOX UPLOAD, LIST, SHARE BENCHMARK START ----------------------------\n")
     for image in images:
         write_and_print(f"***STARTING BENCHMARK FOR: {list(image.values())[0]} images***\n")
         run_dropbox_benchmark(images_folder=list(image.keys())[0])
-    write_and_print("---------------------------- DROPBOX UPLOAD, LIST, SHARE BENCHMARK STOP ----------------------------\n")
+    write_and_print("---------------------------- DROPBOX UPLOAD, LIST, SHARE BENCHMARK STOP  ----------------------------\n")
     # yandex benchmark
     write_and_print("--------------------------- YANDEX UPLOAD, LIST, SHARE S3 BENCHMARK START ---------------------------\n")
     for image in images:
@@ -117,17 +124,17 @@ def upload_share_download():
 
 
 def multiple_node_download():
-    node_counts = [1, 2, 4, 8, 16, 32, 64, 128]
+    node_counts = [1, 2, 4, 8, 16, 32, 64, 128, 256, 512, 1000]
+    write_and_print("--------------------------- YANDEX DOWNLOAD S3 BENCHMARK START ---------------------------\n")
+    for node_count in node_counts:
+        write_and_print(f"***STARTING BENCHMARK FOR: {node_count} nodes***\n")
+        multiple_node_read_yandex(images_folder="images1/", node_count=node_count)
+    write_and_print("--------------------------- YANDEX DOWNLOAD S3 BENCHMARK STOP  ---------------------------\n")
     write_and_print("---------------------------- DROPBOX DOWNLOAD BENCHMARK START ----------------------------\n")
     for node_count in node_counts:
         write_and_print(f"***STARTING BENCHMARK FOR: {node_count} nodes***\n")
-        multiple_node_read_dropbox(images_folder="images30/", node_count=node_count)
+        multiple_node_read_dropbox(images_folder="images1/", node_count=node_count)
     write_and_print("---------------------------- DROPBOX DOWNLOAD BENCHMARK STOP  ----------------------------\n")
-    write_and_print("--------------------------- YANDEX DOWNLOAD S3 BENCHMARK START ---------------------------\n")
-    for node_count in node_counts():
-        write_and_print(f"***STARTING BENCHMARK FOR: {node_count} nodes***\n")
-        multiple_node_read_yandex(images_folder="images30/", node_count=node_count)
-    write_and_print("--------------------------- YANDEX DOWNLOAD S3 BENCHMARK STOP  ---------------------------\n")
 
   
 if __name__ == "__main__":
@@ -140,6 +147,6 @@ if __name__ == "__main__":
         upload_share_download()
     elif arg == "-a":
         write_and_print(header_all(), overwrite=True)
-        upload_share_download()
+        upload_share_download(images=[images1])
         write_and_print("\n\n")
         multiple_node_download()

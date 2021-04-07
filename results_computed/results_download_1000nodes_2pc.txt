@@ -1,0 +1,25 @@
+YANDEX TOTAL ERRORS: 0
+DROPOBX TOTAL ERRORS: 0
+Yandex s3 average for 1: 0.052156 c
+Yandex s3 average for 2: 0.072 c
+Yandex s3 average for 4: 0.07494225 c
+Yandex s3 average for 8: 0.07541162500000001 c
+Yandex s3 average for 16: 0.1306630625 c
+Yandex s3 average for 32: 0.13892959375000002 c
+Yandex s3 average for 64: 0.14563045312499998 c
+Yandex s3 average for 128: 0.14959258267716533 c
+Yandex s3 average for 256: 0.1574679492187501 c
+Yandex s3 average for 512: 0.1618837597656249 c
+Yandex s3 average for 1000: 0.15266833800000007 c
+**************************************
+Dropbox average for 1 nodes: 0.85547 c
+Dropbox average for 2 nodes: 1.1581715 c
+Dropbox average for 4 nodes: 0.9865457500000001 c
+Dropbox average for 8 nodes: 1.00688975 c
+Dropbox average for 16 nodes: 1.2408186875 c
+Dropbox average for 32 nodes: 1.1439227187499998 c
+Dropbox average for 64 nodes: 1.100080859375 c
+Dropbox average for 128 nodes: 1.135498375 c
+Dropbox average for 256 nodes: 1.0690966992187503 c
+Dropbox average for 512 nodes: 1.2730812148437503 c
+Dropbox average for 1000 nodes: 1.3655018014042122 c

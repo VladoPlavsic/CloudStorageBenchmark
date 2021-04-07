@@ -1,0 +1,67 @@
+*----------------------------------------------------------------------------------*
+*                      Dropbox vs Yandex s3 benchmark                              *
+*----------------------------------------------------------------------------------*
+*                                                                                  *
+* In this benchmark we will see 3 of most common operations on  cloud stored files *
+*                                                                                  *
+************************************************************************************
+* 1. Upload files                                                                  *
+* 2. List folder                                                                   *
+* 3. Create sharing links                                                          *
+* Total file count: 5                                                              *
+* Total file count: 15                                                             *
+* Total file count: 30                                                             *
+* Total file count: 100                                                            *
+************************************************************************************
+*                                                                                  *
+* And see how node count affects access speed for stored files:                    *
+*                                                                                  *
+************************************************************************************
+* Total node count: 2                                                              *
+* Total node count: 4                                                              *
+* Total node count: 8                                                              *
+* Total node count: 16                                                             *
+* Total node count: 32                                                             *
+* Total node count: 64                                                             *
+* Total node count: 128                                                            *
+* File count 15                                                                    *
+* Average file size: 8200 bytes                                                    *
+* File type: .jpg                                                                  *
+************************************************************************************
+
+---------------------------- DROPBOX UPLOAD, LIST, SHARE BENCHMARK START ----------------------------
+***STARTING BENCHMARK FOR: 5 images***
+Time elapsed between dropbox start upload images5/ and dropbox stop upload images5/: 0:00:08.153781
+Time elapsed between dropbox start list folder images5/ and dropbox stop list folder images5/: 0:00:00.577422
+Time elapsed between dropbox start create sharing links images5/ and dropbox stop create sharing links images5/: 0:00:06.991327
+***STARTING BENCHMARK FOR: 15 images***
+Time elapsed between dropbox start upload images15/ and dropbox stop upload images15/: 0:00:26.633928
+Time elapsed between dropbox start list folder images15/ and dropbox stop list folder images15/: 0:00:00.340114
+Time elapsed between dropbox start create sharing links images15/ and dropbox stop create sharing links images15/: 0:00:16.154405
+***STARTING BENCHMARK FOR: 30 images***
+Time elapsed between dropbox start upload images30/ and dropbox stop upload images30/: 0:00:40.305735
+Time elapsed between dropbox start list folder images30/ and dropbox stop list folder images30/: 0:00:00.431526
+Time elapsed between dropbox start create sharing links images30/ and dropbox stop create sharing links images30/: 0:00:34.340834
+***STARTING BENCHMARK FOR: 100 images***
+Time elapsed between dropbox start upload images100/ and dropbox stop upload images100/: 0:02:13.656945
+Time elapsed between dropbox start list folder images100/ and dropbox stop list folder images100/: 0:00:00.611161
+Time elapsed between dropbox start create sharing links images100/ and dropbox stop create sharing links images100/: 0:01:55.014048
+---------------------------- DROPBOX UPLOAD, LIST, SHARE BENCHMARK STOP ----------------------------
+--------------------------- YANDEX UPLOAD, LIST, SHARE S3 BENCHMARK START ---------------------------
+***STARTING BENCHMARK FOR: 5 images***
+Time elapsed between yandex s3 start upload images5/ and yandex s3 stop upload images5/: 0:00:01.771644
+Time elapsed between yandex s3 start list folder images5/ and yandex s3 stop list folder images5/: 0:00:00.103666
+Time elapsed between yadnex s3 start create sharing links benchmark and yandex s3 stop create sharing links benchmark: 0:00:00.002008
+***STARTING BENCHMARK FOR: 15 images***
+Time elapsed between yandex s3 start upload images15/ and yandex s3 stop upload images15/: 0:00:04.737140
+Time elapsed between yandex s3 start list folder images15/ and yandex s3 stop list folder images15/: 0:00:00.095890
+Time elapsed between yadnex s3 start create sharing links benchmark and yandex s3 stop create sharing links benchmark: 0:00:00.006622
+***STARTING BENCHMARK FOR: 30 images***
+Time elapsed between yandex s3 start upload images30/ and yandex s3 stop upload images30/: 0:00:09.373624
+Time elapsed between yandex s3 start list folder images30/ and yandex s3 stop list folder images30/: 0:00:00.113096
+Time elapsed between yadnex s3 start create sharing links benchmark and yandex s3 stop create sharing links benchmark: 0:00:00.011136
+***STARTING BENCHMARK FOR: 100 images***
+Time elapsed between yandex s3 start upload images100/ and yandex s3 stop upload images100/: 0:00:31.729132
+Time elapsed between yandex s3 start list folder images100/ and yandex s3 stop list folder images100/: 0:00:00.186252
+Time elapsed between yadnex s3 start create sharing links benchmark and yandex s3 stop create sharing links benchmark: 0:00:00.036239
+--------------------------- YANDEX UPLOAD, LIST, SHARE S3 BENCHMARK STOP  ---------------------------
